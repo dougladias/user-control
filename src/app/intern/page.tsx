@@ -1,4 +1,4 @@
-// src/app/intern/page.tsx
+
 'use client';
 
 import { useEffect, useState } from 'react';
@@ -11,7 +11,8 @@ export default function InternPage() {
   const [dashboard, setDashboard] = useState<InternDashboardData | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState('');
-
+ 
+  
   useEffect(() => {
     async function fetchDashboard() {
       try {
@@ -39,6 +40,7 @@ export default function InternPage() {
     fetchDashboard();
   }, []);
 
+  // Renderização condicional com base no estado de carregamento e erro / Banco de dados
   return (
     <DashboardLayout>
       <div className="max-w-4xl mx-auto">

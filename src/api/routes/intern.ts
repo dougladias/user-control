@@ -1,4 +1,4 @@
-// src/api/routes/intern.ts
+
 import express from 'express';
 import { getDashboard, getTasks } from '../controllers/internController';
 import { authenticate, authorize, requirePermission } from '../middleware/auth';
@@ -15,7 +15,7 @@ router.get('/dashboard',
   requirePermission('read:basic-data'),
   getDashboard
 );
-
+// Rotas para estagiários (também acessíveis por gerentes e admins)
 router.get('/tasks', 
   authorize(['intern', 'manager', 'admin']), 
   requirePermission('read:basic-data'),

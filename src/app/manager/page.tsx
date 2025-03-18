@@ -1,4 +1,4 @@
-// src/app/manager/page.tsx
+
 'use client';
 
 import { useEffect, useState } from 'react';
@@ -38,12 +38,13 @@ export default function ManagerPage() {
 
     fetchDashboard();
   }, []);
-
+ 
+  // Renderização condicional com base no estado de carregamento e erro / Banco de dados
   return (
     <DashboardLayout>
       <div className="max-w-6xl mx-auto">
         <h1 className="text-2xl font-bold mb-6">Dashboard do Gerente</h1>
-        
+              
         {isLoading ? (
           <div className="flex justify-center">
             <div className="animate-spin h-8 w-8 border-t-2 border-b-2 border-blue-500 rounded-full"></div>
@@ -54,6 +55,7 @@ export default function ManagerPage() {
           </div>
         ) : dashboard ? (
           <>
+          // Adicionando mais dois cards
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
               <div className="bg-white p-6 rounded-lg shadow">
                 <h2 className="text-lg font-semibold mb-4">Membros da Equipe</h2>
@@ -62,7 +64,8 @@ export default function ManagerPage() {
                   <div className="ml-2 text-sm text-gray-500">profissionais</div>
                 </div>
               </div>
-              
+
+              // Adicionando mais dois cards
               <div className="bg-white p-6 rounded-lg shadow">
                 <h2 className="text-lg font-semibold mb-4">Projetos Ativos</h2>
                 <div className="flex items-center">
@@ -71,6 +74,7 @@ export default function ManagerPage() {
                 </div>
               </div>
               
+              // Adicionando mais dois cards
               <div className="bg-white p-6 rounded-lg shadow">
                 <h2 className="text-lg font-semibold mb-4">Taxa de Conclusão</h2>
                 <div className="flex items-center">
@@ -80,6 +84,7 @@ export default function ManagerPage() {
               </div>
             </div>
             
+            // Adicionando mais dois cards
             <div className="bg-white p-6 rounded-lg shadow mb-6">
               <h2 className="text-lg font-semibold mb-4">Atividades Recentes</h2>
               {dashboard.recentActivities.length > 0 ? (
@@ -119,6 +124,7 @@ export default function ManagerPage() {
                 <p className="text-gray-500">Nenhuma atividade recente.</p>
               )}
             </div>
+            
             
             <div className="bg-white p-6 rounded-lg shadow">
               <h2 className="text-lg font-semibold mb-4">Ações Rápidas</h2>

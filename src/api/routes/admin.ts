@@ -1,4 +1,4 @@
-// src/api/routes/admin.ts
+
 import express from 'express';
 import { 
   getDashboard, 

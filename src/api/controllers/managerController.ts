@@ -1,4 +1,4 @@
-// src/api/controllers/managerController.ts
+
 import { Request, Response } from 'express';
 import { ManagerDashboardData } from '@/types';
 

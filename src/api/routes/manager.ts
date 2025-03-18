@@ -1,4 +1,4 @@
-// src/api/routes/manager.ts
+
 import express from 'express';
 import { getDashboard, getTeamMembers, getProjects, updateTeamMember } from '../controllers/managerController';
 import { authenticate, authorize, requirePermission } from '../middleware/auth';
@@ -14,19 +14,19 @@ router.get('/dashboard',
   requirePermission('read:detailed-data'),
   getDashboard
 );
-
+// Rotas para gerentes (também acessíveis por admins)
 router.get('/team', 
   authorize(['manager', 'admin']),
   requirePermission('read:detailed-data'),
   getTeamMembers
 );
-
+// Rotas para gerentes (também acessíveis por admins)
 router.get('/projects', 
   authorize(['manager', 'admin']),
   requirePermission('read:detailed-data'),
   getProjects
 );
-
+// Rotas para gerentes (também acessíveis por admins)
 router.put('/team/:id', 
   authorize(['manager', 'admin']),
   requirePermission('update:team-data'),

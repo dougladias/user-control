@@ -1,4 +1,4 @@
-// src/api/config/roles.ts
+
 import { Role } from '@/types';
 
 // Define os papéis disponíveis

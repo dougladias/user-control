@@ -1,4 +1,4 @@
-// src/api/routes/auth.ts
+
 import express from 'express';
 import { login, getCurrentUser } from '../controllers/authController';
 import { authenticate } from '../middleware/auth';

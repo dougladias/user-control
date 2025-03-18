@@ -1,4 +1,4 @@
-// src/api/controllers/adminController.ts
+
 import { Request, Response } from 'express';
 import { AdminDashboardData } from '@/types';
 import { 

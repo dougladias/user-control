@@ -1,4 +1,4 @@
-// src/components/layout/DashboardLayout.tsx
+
 'use client';
 
 import { ReactNode, useEffect } from 'react';
@@ -11,10 +11,12 @@ interface DashboardLayoutProps {
   children: ReactNode;
 }
 
+// Componente DashboardLayout
 export default function DashboardLayout({ children }: DashboardLayoutProps) {
   const { user, isLoading, isAuthenticated, logout, hasPermission } = useAuth();
   const router = useRouter();
 
+  // Verificar se o usuário está autenticado
   useEffect(() => {
     if (!isLoading && !isAuthenticated) {
       router.push('/login');
@@ -33,6 +35,7 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
     return null;
   }
 
+  // Verificar permissão de acesso
   return (
     <div className="flex h-screen bg-gray-100">
       {/* Sidebar */}
@@ -46,7 +49,7 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
           <div className="font-medium">{user?.name}</div>
           <div className="text-sm text-gray-400">{getRoleName(user?.role)}</div>
         </div>
-        
+               
         <nav className="flex-1 p-4">
           <ul className="space-y-2">
             {getLinksByRole(user?.role).map((link) => (

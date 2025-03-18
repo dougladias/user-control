@@ -1,4 +1,4 @@
-// src/api/controllers/internController.ts
+
 import { Request, Response } from 'express';
 import { InternDashboardData } from '@/types';
 

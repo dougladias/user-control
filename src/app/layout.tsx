@@ -1,4 +1,4 @@
-// src/app/layout.tsx
+
 import { AuthProvider } from '@/context/AuthContext';
 import './globals.css';
 import type { Metadata } from 'next';

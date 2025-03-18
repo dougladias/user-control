@@ -1,4 +1,4 @@
-// src/components/auth/LoginForm.tsx
+
 'use client';
 
 import { useState } from 'react';
@@ -45,6 +45,7 @@ export default function LoginForm() {
         </div>
       )}
       
+      // Adicionando formulário de login
       <form onSubmit={handleSubmit}>
         <Input
           label="Email"
@@ -76,6 +77,7 @@ export default function LoginForm() {
         </Button>
       </form>
       
+      // Adicionando credenciais de teste
       <div className="mt-4 text-center text-sm text-gray-600">
         <p>Credenciais de teste:</p>
         <p>Estagiário: intern@example.com / password123</p>

@@ -1,4 +1,4 @@
-// src/app/admin/page.tsx
+
 'use client';
 
 import { useEffect, useState } from 'react';
@@ -40,6 +40,7 @@ export default function AdminPage() {
     fetchDashboard();
   }, []);
 
+  // Renderização condicional com base no estado de carregamento e erro / Banco de dados
   return (
     <DashboardLayout>
       <div className="max-w-6xl mx-auto">
@@ -152,7 +153,8 @@ export default function AdminPage() {
                 </div>
               </div>
             </div>
-            
+
+            // Sidebar com ações administrativas
             <div className="bg-white p-6 rounded-lg shadow">
               <h2 className="text-lg font-semibold mb-4">Ações Administrativas</h2>
               <div className="grid grid-cols-1 md:grid-cols-4 gap-4">

@@ -1,4 +1,4 @@
-// src/api/utils/jwt.ts
+
 import jwt from 'jsonwebtoken';
 import { JwtPayload } from '@/types';
 

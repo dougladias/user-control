@@ -1,4 +1,4 @@
-// src/api/controllers/authController.ts
+
 import { Request, Response } from 'express';
 import bcrypt from 'bcryptjs';
 import { findUserByEmail, findUserById, sanitizeUser } from '../models/users';
